@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#171715">
+    <meta name="description" content="GENTLEMEN'S CLUB — барбершоп для тех, кто ценит мастерство, детали и время для себя. Запишитесь на стрижку в Москве.">
+    <title>GENTLEMEN'S CLUB — искусство быть собой</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <a class="brand" href="#top" aria-label="GENTLEMEN'S CLUB — на главную">
+        <span class="brand-mark" aria-hidden="true">G<span>.</span></span>
+        <span class="brand-name">GENTLEMEN'S<br>CLUB</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="primary-navigation">
+        <span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="primary-navigation" aria-label="Основная навигация">
+        <a href="#services">Услуги</a>
+        <a href="#masters">Мастера</a>
+        <a href="#gallery">Атмосфера</a>
+        <a href="#contacts">Контакты</a>
+        <a class="nav-booking" href="#booking">Записаться <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <img class="hero-image" src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&amp;fit=crop&amp;w=2200&amp;q=85" alt="" fetchpriority="high">
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <p class="eyebrow hero-eyebrow"><span></span> Москва · с 2014 года</p>
+          <h1 id="hero-title">Стиль — это<br><em>личное.</em></h1>
+          <p class="hero-copy">Место, где мастерство встречается с характером.<br>И каждый визит — время для себя.</p>
+          <a class="button button-gold" href="#booking">Выбрать время <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-note"><span>01</span> Точность в каждой детали</div>
+        <a class="scroll-cue" href="#services" aria-label="Прокрутить к услугам"><span></span> Листайте вниз</a>
+      </section>
+
+      <section class="intro section-wrap" aria-label="О барбершопе">
+        <p class="eyebrow">Не просто стрижка</p>
+        <p class="intro-copy">Хороший стиль не требует объяснений. Он начинается с <em>внимания</em> к деталям и заканчивается ощущением, что всё на своём месте.</p>
+        <span class="intro-signature">Ваше место. Ваш ритуал.</span>
+      </section>
+
+      <section class="services section-wrap section-dark" id="services">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">01 / Меню</p>
+            <h2>Время, проведённое<br><em>с пользой.</em></h2>
+          </div>
+          <p class="heading-aside">Точный подход. Проверенные техники.<br>Никаких компромиссов.</p>
+        </div>
+        <div class="services-list">
+          <article class="service-row reveal">
+            <span class="service-number">01</span>
+            <div class="service-main"><h3>Мужская стрижка</h3><p>Форма, которая работает именно на вас</p></div>
+            <span class="service-duration">60 мин</span><span class="service-price">2 500 ₽</span>
+            <a class="service-arrow" href="#booking" aria-label="Записаться на мужскую стрижку">↗</a>
+          </article>
+          <article class="service-row reveal">
+            <span class="service-number">02</span>
+            <div class="service-main"><h3>Стрижка машинкой</h3><p>Чистые линии и безупречный контур</p></div>
+            <span class="service-duration">30 мин</span><span class="service-price">1 500 ₽</span>
+            <a class="service-arrow" href="#booking" aria-label="Записаться на стрижку машинкой">↗</a>
+          </article>
+          <article class="service-row reveal">
+            <span class="service-number">03</span>
+            <div class="service-main"><h3>Моделирование бороды</h3><p>Горячее полотенце, форма, уход</p></div>
+            <span class="service-duration">45 мин</span><span class="service-price">1 800 ₽</span>
+            <a class="service-arrow" href="#booking" aria-label="Записаться на моделирование бороды">↗</a>
+          </article>
+          <article class="service-row reveal">
+            <span class="service-number">04</span>
+            <div class="service-main"><h3>Стрижка + борода</h3><p>Полный ритуал для вашего образа</p></div>
+            <span class="service-duration">90 мин</span><span class="service-price">3 800 ₽</span>
+            <a class="service-arrow" href="#booking" aria-label="Записаться на стрижку и бороду">↗</a>
+          </article>
+        </div>
+        <p class="services-footnote">* Все услуги включают консультацию мастера и чашку хорошего кофе.</p>
+      </section>
+
+      <section class="masters section-wrap" id="masters">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">02 / Люди дела</p>
+            <h2>Руки, которым<br>можно <em>доверять.</em></h2>
+          </div>
+          <p class="heading-aside">Встречайте не просто мастеров.<br>Людей, которым важно, как вы себя чувствуете.</p>
+        </div>
+        <div class="masters-grid">
+          <article class="master-card reveal">
+            <div class="master-image"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Портрет барбера Артёма" loading="lazy"><span>01</span></div>
+            <div class="master-info"><div><h3>Артём Волков</h3><p>Старший барбер · 9 лет опыта</p></div><a href="#booking" aria-label="Записаться к Артёму Волкову">↗</a></div>
+          </article>
+          <article class="master-card reveal">
+            <div class="master-image"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Портрет барбера Максима" loading="lazy"><span>02</span></div>
+            <div class="master-info"><div><h3>Максим Орлов</h3><p>Барбер · 6 лет опыта</p></div><a href="#booking" aria-label="Записаться к Максиму Орлову">↗</a></div>
+          </article>
+          <article class="master-card reveal">
+            <div class="master-image"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Портрет барбера Ильи" loading="lazy"><span>03</span></div>
+            <div class="master-info"><div><h3>Илья Миронов</h3><p>Барбер · 5 лет опыта</p></div><a href="#booking" aria-label="Записаться к Илье Миронову">↗</a></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="gallery section-dark" id="gallery">
+        <div class="section-wrap">
+          <div class="section-heading reveal">
+            <div><p class="eyebrow">03 / Внутри клуба</p><h2>Атмосфера<br>говорит <em>сама.</em></h2></div>
+            <p class="heading-aside">Место, где можно выдохнуть.<br>И никуда не торопиться.</p>
+          </div>
+          <div class="gallery-grid">
+            <figure class="gallery-item gallery-large reveal"><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&amp;fit=crop&amp;w=1400&amp;q=85" alt="Барбер аккуратно стрижёт клиента" loading="lazy"><figcaption>01 — Мастерство в процессе</figcaption></figure>
+            <figure class="gallery-item gallery-tall reveal"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Инструменты барбера на рабочем месте" loading="lazy"><figcaption>02 — Инструменты имеют значение</figcaption></figure>
+            <figure class="gallery-item gallery-wide reveal"><img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&amp;fit=crop&amp;w=1400&amp;q=85" alt="Интерьер современного барбершопа" loading="lazy"><figcaption>03 — Пространство для себя</figcaption></figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="manifesto section-wrap">
+        <div class="manifesto-mark reveal" aria-hidden="true">G.</div>
+        <div class="manifesto-content reveal">
+          <p class="eyebrow">04 / Наш подход</p>
+          <h2>Дело не только<br>в том, как ты <em>выглядишь.</em></h2>
+          <p>Дело в том, как ты себя чувствуешь, когда выходишь за дверь. Мы подумали обо всём, чтобы ты мог подумать о себе.</p>
+          <div class="benefits">
+            <div><span>01</span><h3>Твоё время</h3><p>Принимаем по записи. Никакого ожидания и спешки.</p></div>
+            <div><span>02</span><h3>Твоё решение</h3><p>Сначала слушаем. Потом предлагаем. Всегда честно.</p></div>
+            <div><span>03</span><h3>Твой ритуал</h3><p>Хороший кофе, любимое кресло и мастер своего дела.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="booking section-dark" id="booking">
+        <div class="section-wrap booking-grid">
+          <div class="booking-copy reveal">
+            <p class="eyebrow">05 / Твой следующий шаг</p>
+            <h2>Хороший день<br>начинается <em>здесь.</em></h2>
+            <p>Оставьте контакты — мы позвоним, подберём мастера и удобное время.</p>
+            <div class="booking-detail"><span>Или позвоните</span><a href="tel:+74951234567">+7 (495) 123-45-67</a></div>
+          </div>
+          <form class="booking-form reveal" id="booking-form">
+            <div class="form-field"><label for="client-name">Как к вам обращаться <span>*</span></label><input id="client-name" name="name" type="text" autocomplete="name" placeholder="Ваше имя" required></div>
+            <div class="form-field"><label for="client-phone">Номер телефона <span>*</span></label><input id="client-phone" name="phone" type="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required></div>
+            <div class="form-row">
+              <div class="form-field"><label for="service-select">Услуга <span>*</span></label><select id="service-select" name="service" required><option value="" selected disabled>Выберите услугу</option><option>Мужская стрижка — 2 500 ₽</option><option>Стрижка машинкой — 1 500 ₽</option><option>Моделирование бороды — 1 800 ₽</option><option>Стрижка + борода — 3 800 ₽</option></select></div>
+              <div class="form-field"><label for="visit-date">Удобная дата <span>*</span></label><input id="visit-date" name="date" type="date" required></div>
+            </div>
+            <button class="button button-gold form-submit" type="submit">Записаться <span aria-hidden="true">↗</span></button>
+            <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+            <p class="form-success" id="form-success" role="status" aria-live="polite" hidden></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer section-wrap" id="contacts">
+      <div class="footer-top">
+        <a class="brand footer-brand" href="#top" aria-label="GENTLEMEN'S CLUB — на главную">
+          <span class="brand-mark" aria-hidden="true">G<span>.</span></span>
+          <span class="brand-name">GENTLEMEN'S<br>CLUB</span>
+        </a>
+        <p>Стиль — это личное.<br>А хорошее место всегда рядом.</p>
+        <a class="footer-booking" href="#booking">Записаться на визит <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="footer-details">
+        <div><span class="eyebrow">Адрес</span><p>Москва, Большая Никитская, 22</p><a href="https://maps.google.com/?q=Bolshaya+Nikitaskaya+22+Moscow" target="_blank" rel="noreferrer">Построить маршрут ↗</a></div>
+        <div><span class="eyebrow">Часы работы</span><p>Ежедневно<br>10:00 — 22:00</p></div>
+        <div><span class="eyebrow">На связи</span><p><a href="tel:+74951234567">+7 (495) 123-45-67</a><br><a href="mailto:hello@gentlemensclub.ru">hello@gentlemensclub.ru</a></p></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 GENTLEMEN'S CLUB</span><span>Сделано с вниманием к деталям.</span><a href="#top">Наверх ↑</a></div>
+    </footer>
+  </body>
+</html>
