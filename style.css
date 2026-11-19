@@ -45,9 +45,11 @@ h1, h2, h3, p, figure { margin-top: 0; }
 .hero h1 { margin: 27px 0 19px; font-family: var(--font-display); font-size: clamp(64px, 8.5vw, 118px); font-weight: 400; letter-spacing: -.055em; line-height: .98; }
 h1 em, h2 em { color: var(--gold); font-weight: 400; }
 .hero-copy { margin-bottom: 32px; color: rgba(239,237,231,.78); font-size: 13px; line-height: 1.9; }
-.button { display: inline-flex; min-height: 51px; align-items: center; justify-content: center; gap: 26px; padding: 0 21px; border: 1px solid transparent; cursor: pointer; font-size: 11px; font-weight: 600; transition: background .2s ease, color .2s ease, transform .2s ease, border-color .2s ease; }
+.button { display: inline-flex; min-height: 51px; align-items: center; justify-content: center; gap: 26px; padding: 0 21px; border: 1px solid transparent; cursor: pointer; font-size: 11px; font-weight: 600; transition: background .2s ease, color .2s ease, transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
 .button:hover { transform: translateY(-2px); }
 .button:active { transform: translateY(0); }
+.button span { transition: transform .2s ease; }
+.button:hover span { transform: translate(3px, -3px); }
 .button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
 .button-gold { background: var(--gold); color: #171715; }
 .button-gold:hover { background: #d3bd96; }
@@ -67,7 +69,8 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
 .heading-aside { margin: 0 0 7px; color: #88867f; font-size: 11px; line-height: 1.9; }
 .section-dark .heading-aside { color: #aaa79e; }
 .services-list { border-top: 1px solid var(--line); }
-.service-row { display: grid; min-height: 106px; grid-template-columns: 55px 1fr 90px 100px 20px; align-items: center; column-gap: 22px; border-bottom: 1px solid var(--line); }
+.service-row { display: grid; min-height: 106px; grid-template-columns: 55px 1fr 90px 100px 20px; align-items: center; column-gap: 22px; border-bottom: 1px solid var(--line); transition: background .25s ease; }
+.service-row:hover { background: rgba(255,255,255,.025); }
 .service-number, .service-duration { color: #9c998f; font-size: 10px; }
 .service-main h3 { margin: 0 0 7px; font-family: var(--font-display); font-size: 22px; font-weight: 400; }
 .service-main p { margin: 0; color: #9c998f; font-size: 10px; }
@@ -86,8 +89,9 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
 .master-info { display: flex; align-items: center; justify-content: space-between; padding-top: 17px; }
 .master-info h3 { margin: 0 0 7px; font-family: var(--font-display); font-size: 20px; font-weight: 400; }
 .master-info p { margin: 0; color: #79766f; font-size: 10px; }
-.master-info > a { display: grid; width: 35px; height: 35px; place-items: center; border: 1px solid #ccc8be; color: #8d7449; transition: background .2s ease; }
+.master-info > a { display: grid; width: 35px; height: 35px; place-items: center; border: 1px solid #ccc8be; color: #8d7449; transition: background .2s ease, border-color .2s ease, transform .2s ease; }
 .master-info > a:hover { background: #e2ded4; }
+.master-info > a:hover { transform: translate(2px, -2px); border-color: var(--gold); }
 
 .gallery { padding-top: 108px; padding-bottom: 120px; }
 .gallery .section-heading { margin-bottom: 49px; }
@@ -119,10 +123,18 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
 .booking-detail a { font-family: var(--font-display); font-size: 20px; }
 .booking-form { padding-top: 5px; }
 .form-field { display: flex; flex: 1; flex-direction: column; gap: 10px; margin-bottom: 24px; }
-.form-field label { color: #c8c5bc; font-size: 10px; }
+.form-field label { color: #c8c5bc; font-size: 10px; transition: color .2s ease; }
 .form-field label span { color: var(--gold); }
-.form-field input, .form-field select { width: 100%; min-height: 44px; padding: 0 1px; border: 0; border-bottom: 1px solid #55544f; border-radius: 0; background: transparent; color: var(--paper); font-size: 12px; }
+.form-field:focus-within label { color: var(--gold); }
+.form-field input:not([type="hidden"]), .form-field select { width: 100%; min-height: 44px; padding: 0 1px; border: 0; border-bottom: 1px solid #55544f; border-radius: 0; background: transparent; color: var(--paper); font-size: 12px; transition: border-color .2s ease, box-shadow .2s ease; }
 .form-field input::placeholder { color: #77756e; }
+.form-field input:focus, .form-field select:focus { border-bottom-color: var(--gold); box-shadow: 0 1px 0 var(--gold); outline: none; }
+.phone-input { display: flex; align-items: center; gap: 12px; border-bottom: 1px solid #55544f; transition: border-color .2s ease, box-shadow .2s ease; }
+.phone-input:focus-within { border-bottom-color: var(--gold); box-shadow: 0 1px 0 var(--gold); }
+.phone-prefix { flex: 0 0 auto; color: var(--gold); font-size: 12px; }
+.phone-input input:not([type="hidden"]) { min-width: 0; border-bottom: 0; }
+.phone-input input:focus { box-shadow: none; }
+.field-hint { margin-top: -3px; color: #828078; font-size: 9px; line-height: 1.6; }
 .form-field select { color: #77756e; }
 .form-field select:valid { color: var(--paper); }
 .form-field option { background: var(--ink); color: var(--paper); }
@@ -149,6 +161,8 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
 
 .js-enabled .reveal { opacity: 0; transform: translateY(19px); transition: opacity .65s ease, transform .65s ease; }
 .js-enabled .reveal.is-visible { opacity: 1; transform: translateY(0); }
+.js-enabled .masters-grid .reveal:nth-child(2), .js-enabled .gallery-grid .reveal:nth-child(2) { transition-delay: .12s; }
+.js-enabled .masters-grid .reveal:nth-child(3), .js-enabled .gallery-grid .reveal:nth-child(3) { transition-delay: .24s; }
 
 @media (min-width: 1500px) {
   .hero-content { padding-left: max(7.5%, calc((100vw - 1300px) / 2)); }
@@ -231,7 +245,7 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
   .form-row { gap: 17px; }
   .form-field { margin-bottom: 21px; }
   .form-field label { font-size: 9px; }
-  .form-field input, .form-field select { font-size: 11px; }
+  .form-field input:not([type="hidden"]), .form-field select { font-size: 11px; }
   .form-submit { width: 100%; }
   .site-footer { padding-top: 42px; padding-bottom: 18px; }
   .footer-top { flex-wrap: wrap; gap: 22px; padding-bottom: 29px; }

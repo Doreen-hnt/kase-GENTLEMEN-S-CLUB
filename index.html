@@ -150,8 +150,8 @@
             <div class="booking-detail"><span>Или позвоните</span><a href="tel:+74951234567">+7 (495) 123-45-67</a></div>
           </div>
           <form class="booking-form reveal" id="booking-form">
-            <div class="form-field"><label for="client-name">Как к вам обращаться <span>*</span></label><input id="client-name" name="name" type="text" autocomplete="name" placeholder="Ваше имя" required></div>
-            <div class="form-field"><label for="client-phone">Номер телефона <span>*</span></label><input id="client-phone" name="phone" type="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required></div>
+            <div class="form-field"><label for="client-name">Как к вам обращаться <span>*</span></label><input id="client-name" name="name" type="text" autocomplete="name" maxlength="60" placeholder="Ваше имя" required></div>
+            <div class="form-field"><label for="client-phone">Номер телефона <span>*</span></label><div class="phone-input"><span class="phone-prefix" aria-hidden="true">+7</span><input id="client-phone" type="tel" inputmode="numeric" autocomplete="tel-national" maxlength="18" placeholder="(999) 123-45-67" aria-describedby="phone-hint" required></div><input id="full-phone" name="phone" type="hidden"><span class="field-hint" id="phone-hint">Код страны +7 уже указан. Введите 10 цифр.</span></div>
             <div class="form-row">
               <div class="form-field"><label for="service-select">Услуга <span>*</span></label><select id="service-select" name="service" required><option value="" selected disabled>Выберите услугу</option><option>Мужская стрижка — 2 500 ₽</option><option>Стрижка машинкой — 1 500 ₽</option><option>Моделирование бороды — 1 800 ₽</option><option>Стрижка + борода — 3 800 ₽</option></select></div>
               <div class="form-field"><label for="visit-date">Удобная дата <span>*</span></label><input id="visit-date" name="date" type="date" required></div>
